@@ -1,5 +1,11 @@
-def maximo (l,n):
-	if l[n]>l[n+1]:
-		res=l[n]		
-	return res>maximo(l,n) 
+def maximo (l):
+	if len(l) == 1:
+		return l[0]
+	
+	sublista = l[1:]
+	submaximo = maximo(sublista)
+
+	if l[0] > submaximo:		
+		return l[0]
+	return submaximo	 
 	

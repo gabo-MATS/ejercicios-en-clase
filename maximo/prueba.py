@@ -1,6 +1,4 @@
 from maximo import maximo 
-l=[1892,1938,9,33,9703,24,8199,88]
-n=0
-res=0
-res=maximo(l,n)
+l=[102,1098,9,3993,970300,24,199,888]
+res=maximo(l)
 print (res)
