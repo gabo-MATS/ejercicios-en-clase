@@ -1,4 +1,4 @@
 from palindromo import es_palindromo
-l="hola ana aloh"
+l=" ana "
 res=es_palindromo(l)
 print(res)
