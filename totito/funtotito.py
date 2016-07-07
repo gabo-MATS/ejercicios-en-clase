@@ -1,8 +1,16 @@
-def marca (m ,l):
-						
-	for j in range (len(l)) :
-		for k in range (len(l)):
-			if m == l[j][k]:
-				l[j][k]=X
-	return l		
+def gano ( l):
+	X=1
+	O=-1	
+	if sum(l[0])==3: 				
+		w = True
+		return w
+		return ("jugador 1 gano")	
+	if sum(l[1])==3: 				
+		w = True
+		return w
+		return ("jugador 1 gano")	
+	if sum(l[2])==3: 				
+		w = True
+		return w
+		return ("jugador 1 gano")				
 
