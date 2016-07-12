@@ -8,25 +8,13 @@ while w!=True:
 	print (l[0])
 	print (l[1])
 	print (l[2]) 
-	s=str(input("ingrese pocision jugador 1 : "))
-	if s=="a":
-		l[0][0]="X"
-	if s=="b":
-		l[0][1]="X"
-	if s=="c":
-		l[0][2]="X"
-	if s=="d":
-		l[1][0]="X"
-	if s=="e":
-		l[1][1]="X"
-	if s=="f":
-		l[1][2]="X"
-	if s=="g":
-		l[2][0]="X"
-	if s=="h":
-		l[2][1]="X"	
-	if s=="i":
-		l[2][2]="X"
+	s=input("ingrese pocision jugador 1 : ")
+	s_valor=ord(s)-ord("a")
+	s_fila=s_valor%3
+	s_columna=s_valor//3
+	l[s_columna][s_fila]="X"
+
+
 	if l[0][0]=="X" and l[0][1]=="X" and l[0][2]=="X":
 		print ("jugador 1 gano") 	
 		w=True
@@ -56,24 +44,10 @@ while w!=True:
 		print (l[1])
 		print (l[2]) 
 		s=str(input("ingrese pocision jugador 2 : "))
-		if s=="a":
-			l[0][0]="O"
-		if s=="b":
-			l[0][1]="O"
-		if s=="c":
-			l[0][2]="O"
-		if s=="d":
-			l[1][0]="O"
-		if s=="e":
-			l[1][1]="O"
-		if s=="f":
-			l[1][2]="O"
-		if s=="g":
-			l[2][0]="O"
-		if s=="h":
-			l[2][1]="O"	
-		if s=="i":
-			l[2][2]="O"
+		s_valor=ord(s)-ord("a")
+		s_fila=s_valor%3
+		s_columna=s_valor//3
+		l[s_columna][s_fila]="O"
 		if l[0][0]=="O" and l[0][1]=="O" and l[0][2]=="O":
 			print ("jugador 2 gano") 	
 			w=True
