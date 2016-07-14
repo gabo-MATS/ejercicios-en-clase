@@ -1,10 +1,15 @@
+from funtotito import gano
 print ("bienvenidos")
 l= [["a","b","c"],
 	["d","e","f"],
 	["g","h","i"]
 	]
-w = 0	
-while w!=True:	
+m= [[0,0,0],
+	[0,0,0],
+	[0,0,0]
+	]	
+res= 0	
+while res!=2 and res!=1:	
 	print (l[0])
 	print (l[1])
 	print (l[2]) 
@@ -13,33 +18,9 @@ while w!=True:
 	s_fila=s_valor%3
 	s_columna=s_valor//3
 	l[s_columna][s_fila]="X"
-
-
-	if l[0][0]=="X" and l[0][1]=="X" and l[0][2]=="X":
-		print ("jugador 1 gano") 	
-		w=True
-	if l[1][0]=="X" and l[1][1]=="X" and l[1][2]=="X":
-		print ("jugador 1 gano") 	
-		w=True	
-	if l[2][0]=="X" and l[2][1]=="X" and l[2][2]=="X":
-		print ("jugador 1 gano") 	
-		w=True
-	if l[0][0]=="X" and l[1][0]=="X" and l[2][0]=="X":
-		print ("jugador 1 gano") 	
-		w=True		
-	if l[0][1]=="X" and l[1][1]=="X" and l[2][1]=="X":
-		print ("jugador 1 gano") 	
-		w=True
-	if l[0][2]=="X" and l[1][2]=="X" and l[2][2]=="X":
-		print ("jugador 1 gano") 	
-		w=True	
-	if l[0][0]=="X" and l[1][1]=="X" and l[2][2]=="X":
-		print ("jugador 1 gano") 	
-		w=True
-	if l[0][2]=="X" and l[1][1]=="X" and l[2][0]=="X":
-		print ("jugador 1 gano") 	
-		w=True	
-	if w != True:	
+	m[s_columna][s_fila]=1
+	res=gano(m)	
+	if res != 1:	
 		print (l[0])
 		print (l[1])
 		print (l[2]) 
@@ -48,30 +29,14 @@ while w!=True:
 		s_fila=s_valor%3
 		s_columna=s_valor//3
 		l[s_columna][s_fila]="O"
-		if l[0][0]=="O" and l[0][1]=="O" and l[0][2]=="O":
-			print ("jugador 2 gano") 	
-			w=True
-		if l[1][0]=="O" and l[1][1]=="O" and l[1][2]=="O":
-			print ("jugador 2 gano") 	
-			w=True	
-		if l[2][0]=="O" and l[2][1]=="O" and l[2][2]=="O":
-			print ("jugador 2 gano") 	
-			w=True
-		if l[0][0]=="O" and l[1][0]=="O" and l[2][0]=="O":
-			print ("jugador 2 gano") 	
-			w=True		
-		if l[0][1]=="O" and l[1][1]=="O" and l[2][1]=="O":
-			print ("jugador 2 gano") 	
-			w=True
-		if l[0][2]=="O" and l[1][2]=="O" and l[2][2]=="O":
-			print ("jugador 2 gano") 	
-			w=True	
-		if l[0][0]=="O" and l[1][1]=="O" and l[2][2]=="O":
-			print ("jugador 2 gano") 	
-			w=True
-		if l[0][2]=="O" and l[1][1]=="O" and l[2][0]=="O":
-			print ("jugador 2 gano") 	
-			w=True				
+		m[s_columna][s_fila]=-1
+		res=gano(m)
+
+if res ==1:
+	print ("gano el jugador 1 !!!!!")	
+if res ==2:
+	print ("gano el jugador 2!!!!!")		
+		
 print (l[0])
 print (l[1])
 print (l[2]) 
