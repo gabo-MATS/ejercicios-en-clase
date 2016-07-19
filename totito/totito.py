@@ -9,7 +9,7 @@ m= [[0,0,0],
 	[0,0,0]
 	]	
 res= 0	
-while res!=2 and res!=1:	
+while res!=2 and res!=1 :	
 	print (l[0])
 	print (l[1])
 	print (l[2]) 
@@ -20,7 +20,7 @@ while res!=2 and res!=1:
 	l[s_columna][s_fila]="X"
 	m[s_columna][s_fila]=1
 	res=gano(m)	
-	if res != 1:	
+	if res != 1 :	
 		print (l[0])
 		print (l[1])
 		print (l[2]) 
@@ -32,11 +32,11 @@ while res!=2 and res!=1:
 		m[s_columna][s_fila]=-1
 		res=gano(m)
 
+
 if res ==1:
 	print ("gano el jugador 1 !!!!!")	
 if res ==2:
 	print ("gano el jugador 2!!!!!")		
-		
 print (l[0])
 print (l[1])
 print (l[2]) 

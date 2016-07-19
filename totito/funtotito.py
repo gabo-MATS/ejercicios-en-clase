@@ -15,7 +15,7 @@ def gano (m):
 	if 	3 in sumas:
 		return 1
 	elif -3 in sumas:
-		return 2
+		return 2	
 	else : 
 		return False		
 
