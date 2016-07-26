@@ -1,6 +1,6 @@
 import random
-def palabra():
-	palabras= ["de",
+PALABRAS = [
+	"de",
 	"la",
 	"que",
 	"el",
@@ -500,6 +500,7 @@ def palabra():
 	"organizacion",
 	"nuevas",
 	"calidad",
-	]
-	p=random.choice(palabras)
+]
+def palabra():
+	p=random.choice(PALABRAS)
 	return p

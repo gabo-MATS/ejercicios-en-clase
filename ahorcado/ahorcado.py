@@ -1,22 +1,23 @@
 from palabras import palabra
-from gano import gano 
+from gano import ga 
 from muñeco import mu
 print ("bienvenidos")
 j="si"
 gano=False
-v=" "
-p=palabra()
+v=0
 while j == "si" :
 	w=palabra()
 	sumaw=len(w)
-	pal=list(p)
+	pal=list(w)
+	print (w)
 	while gano != "si" and gano != "no" :
 		print ("_ "*sumaw)
 		l=input ("ingrse una letra: ")
-		gano=gano(l,pal)
-		print (v)
+		gano=ga(l,pal)
 		if gano == False:
-			print (mu)
+			v=v+1
+			print (mu(v)) 
+				
 
 
 	j=input("desea seguir jugando: ")	
