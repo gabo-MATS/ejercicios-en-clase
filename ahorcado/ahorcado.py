@@ -10,7 +10,7 @@ while j == "si" :
 	guiones = []
 	gano=False
 	v=0
-	print (w)
+	lu=[]
 	for l in w:
 			guiones.append(" _")
 	while gano != "si" and gano != "no" :
@@ -21,6 +21,8 @@ while j == "si" :
 				guiones[i]=l
 		gano=ga(l,pal)
 		if gano == False:
+			lu.append(l)
+			print ("".join(lu))
 			v=v+1
 			print (mu(v))
 			if v == 7:
@@ -32,5 +34,6 @@ while j == "si" :
 		print ("perdio") 
 	if gano == "si":
 		print ("gano!!!!!") 				
+	print ("la palabra era : ", w)	
 	j=input("desea seguir jugando: ")	
 print ("gracias por jugar")
