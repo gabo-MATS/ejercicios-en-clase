@@ -1,6 +1,6 @@
 from fig import FiguraGeometrica
 #un cuadrado es una figura geometrica  
-class cuadrado(FiguraGeometrica) :
+class Cuadrado(FiguraGeometrica) :
 	def __init__(self,lado):
 		super().__init__(lado,lado) 
 	def imprimir (self):
