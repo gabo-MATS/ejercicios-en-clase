@@ -2,7 +2,7 @@ from fig import FiguraGeometrica
 #un triangulo es una figura geometrica  
 class Triangulo(FiguraGeometrica) :
 	def __init__(self,base,altura):
-		super().__init__(base,altura) 
+		super(). __init__ (base,altura) 
 	def imprimir (self):
 		return " "
 		for i in range(self.altura):
