@@ -1,12 +1,13 @@
 from fig import FiguraGeometrica
-#un triangulo es una figura geometrica  
+#un triangulo es una figura geometrica
+resultado=None  
 class Triangulo(FiguraGeometrica) :
 	def __init__(self,base,altura):
 		super(). __init__ (base,altura) 
 	def imprimir (self):
-		return " "
+		resultado= ""
 		for i in range(self.altura):
-			resultado += "*" * (i+1)+"\n" 
+			resultado += " "*(self.altura-i) + " *" * (i+1)+"\n" 
 		return resultado
 	def calcular_area(self):
-		return super().calcular_area/2			
+		return super().calcular_area()/2			
