@@ -5,7 +5,7 @@ class Robot(object):
 		self.y=0
 		self.fichas=0
 		self.mapa= mapa_final
-	def caminar(self):
+	def move(self):
 		if self.direccion==0 and self.x<80:
 			self.x+=1	
 		if self.direccion==90 and self.y<25:
@@ -14,10 +14,10 @@ class Robot(object):
 			self.x-=1
 		if self.direccion==270 and self.y>0:
 			self.y-=1			
-	def rotar(self):
+	def rotate(self):
 		self.direccion-=90
 		if self.direccion <0:
 			self.direccion=270
-	def recoger(self):
+	def pick(self):
 		self.fichas+=1					
 #^=90 <=180 >= 0  v=270

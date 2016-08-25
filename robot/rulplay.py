@@ -9,7 +9,7 @@ def cargar_mapa(mapa):
 	return mapa_final
 
 mi_mapa = cargar_mapa("mapas/mapa1.txt")
-print (mapa_final)
+
 
 ordenes = []
 def cargar_instrucciones(instrucciones):
@@ -22,5 +22,5 @@ def cargar_instrucciones(instrucciones):
 	return ordenes
 
 reglas = cargar_instrucciones("instrucciones/programa1.txt")	
-print (ordenes)
+
 
