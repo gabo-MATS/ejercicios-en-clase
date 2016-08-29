@@ -16,11 +16,41 @@ class Robot(object):
 		if self.direccion==180 and self.x>0:
 			self.x-=1
 		if self.direccion==270 and self.y>0:
-			self.y-=1			
+			self.y-=1				
 	def rotate(self):
 		self.direccion-=90
 		if self.direccion <0:
 			self.direccion=270
+		if self.direccion==0:
+			robot=">"
+			return robot
+		if self.direccion==270:
+			robot="v"
+			return robot
+			robot="<"
+		if self.direccion==180:
+			return robot
+		if self.direccion==90:
+			robot="^"
+			return robot				
 	def pick(self):
-		self.fichas+=1					
-#^=90 <=180 >= 0  v=270
+		self.fichas+=1
+
+
+print (Robot.rotate(robot))
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+print (Robot.rotate)
+# ^=90 <=180 >= 0  v=270

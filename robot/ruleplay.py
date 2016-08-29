@@ -1,2 +1,2 @@
 for i  len (mapa)
-	for j 
+	for j in len(mapa(i))
