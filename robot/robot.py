@@ -36,21 +36,4 @@ class Robot(object):
 	def pick(self):
 		self.fichas+=1
 
-
-print (Robot.rotate(robot))
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
-print (Robot.rotate)
 # ^=90 <=180 >= 0  v=270
