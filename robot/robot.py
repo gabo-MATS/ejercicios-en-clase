@@ -1,6 +1,6 @@
 class Robot(object):
 	def __init__(self,x,y):
-		self.direccion=90
+		self.direccion="^"
 		self.x=x
 		self.y=y
 		self.fichas=0
@@ -9,31 +9,26 @@ class Robot(object):
 	def colocar_en_mapa(self,mapa):
 		pass	
 	def move(self):
-		if self.direccion==0 and self.x<80:
+		if self.direccion==">" and self.x<ancho:
 			self.x+=1	
-		if self.direccion==90 and self.y<25:
+		if self.direccion=="v" and self.y<alto:
 			self.y+=1
-		if self.direccion==180 and self.x>0:
+		if self.direccion=="<" and self.x>0:
 			self.x-=1
-		if self.direccion==270 and self.y>0:
+		if self.direccion=="^" and self.y>0:
 			self.y-=1				
 	def rotate(self):
-		self.direccion-=90
-		if self.direccion <0:
-			self.direccion=270
-		if self.direccion==0:
-			robot=">"
-			return robot
-		if self.direccion==270:
-			robot="v"
-			return robot
-			robot="<"
-		if self.direccion==180:
-			return robot
-		if self.direccion==90:
-			robot="^"
-			return robot				
+		if self.direccion=="^":
+			self.direccion=">"
+		if self.direccion==">":
+			self.direccion="v"
+		if self.direccion=="v":
+			self.direccion="<"
+		if self.direccion=="<"
+			self.direccion="^"		
+		return self.direccion				
 	def pick(self):
+		
 		self.fichas+=1
 
 # ^=90 <=180 >= 0  v=270
