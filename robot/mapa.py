@@ -4,4 +4,14 @@ class Mapa (object):
 		self.alto=alto
 		self.monedas=[]
 		self.robot=None
-	def 	
+	def represanta_mapa(self,ancho,alto):
+		for j in range(alto):
+			return(" "*ancho)	
+
+	def agregar_moneda(self,monedas):
+		pass
+
+	def agregar_robot(self,robot):
+		pass
+
+	

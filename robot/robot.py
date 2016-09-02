@@ -27,8 +27,8 @@ class Robot(object):
 		if self.direccion=="<"
 			self.direccion="^"		
 		return self.direccion				
-	def pick(self):
-		
-		self.fichas+=1
+	def pick(self,x,y):
+		if self.x==x and self.y==y:
+			self.fichas+=1
 
 # ^=90 <=180 >= 0  v=270

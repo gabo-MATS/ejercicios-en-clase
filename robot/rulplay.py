@@ -1,3 +1,6 @@
+import robot
+import mapa
+
 mapa_final = []
 def cargar_mapa(mapa):
 	
@@ -6,7 +9,7 @@ def cargar_mapa(mapa):
 	for line in f:
 		mapa_final.append(list(line.strip()))
 		
-	return (str.join(mapa_final))
+	return mapa_final
 
 mi_mapa = cargar_mapa("mapas/mapa1.txt")
 
@@ -22,5 +25,12 @@ def cargar_instrucciones(instrucciones):
 	return ordenes
 
 reglas = cargar_instrucciones("instrucciones/programa1.txt")	
+
+
+if reglas=='PICK':
+	robot.
+if reglas=='MOVE':
+
+if reglas=='ROTATE':	
 
 
