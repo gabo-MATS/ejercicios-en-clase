@@ -1,0 +1,3 @@
+rotar derecha (girar)
+adelante (caminar)
+recoger (levantar)
