@@ -22,14 +22,13 @@ class Mapa(object):
 
     def dibujar(self):
         resultado = ""
-
         for y in range(self.altura):
             for x in range(self.ancho):
                 if x == self.robot.x and y == self.robot.y:
                     resultado += self.robot.dibujar()
 
                 elif self.contar_monedas_en(x, y) > 0:
-                    resultado += self.contar_monedas_en(x, y)
+                    resultado += str(self.contar_monedas_en(x, y))
                 else:
                     resultado += " "
 

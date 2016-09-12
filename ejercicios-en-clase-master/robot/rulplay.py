@@ -1,6 +1,7 @@
 from robot import Robot
 from mapa import Mapa
 from moneda import Moneda
+from utilidades import cargar_mapa,cargar_instrucciones
 import time 
 
 mapa_final = []
