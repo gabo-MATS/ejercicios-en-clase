@@ -15,7 +15,7 @@ class Mapa(object):
         return contador
 
     def asignar_robot(self, robot):
-        self.robot = robot
+        self.robot = str(robot)
 
     def agregar_moneda(self, moneda):
         self.monedas.append(moneda)

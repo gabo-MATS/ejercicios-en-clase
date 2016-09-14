@@ -4,20 +4,9 @@ from moneda import Moneda
 from utilidades import cargar_mapa,cargar_instrucciones
 import time 
 
-mapa_final = []
-def cargar_mapa(mapa):	
-	f = open(mapa, "r")	
-	for line in f:
-		mapa_final.append(list(line.strip()))
-	return mapa_final
-mi_mapa = cargar_mapa("mapas/mapa1.txt")
 
-ordenes = []
-def cargar_instrucciones(instrucciones):	
-	h = open(instrucciones, "r")
-	for regla in h:
-		ordenes.append(list(regla.split()))
-	return ordenes
+
+mi_mapa = cargar_mapa("mapas/mapa1.txt")
 reglas = cargar_instrucciones("instrucciones/programa1.txt")
 
 for y  in range(len(mi_mapa)):
@@ -25,21 +14,21 @@ for y  in range(len(mi_mapa)):
 	for x in range (len(fila)):
 		casilla=mi_mapa[y][x]
 		if casilla == "*":
-			robot(x,y)
-		if casilla == "0":
-			pass
-		if casilla > "0":
+			Robot.dibujar(x,y)
+			Mapa.asignar_robot(x,y)
+			Robot.asignar_mapa(x,y)
+		else:
 			Moneda(x,y)
 
 	
 for i in reglas:
 	if i=='PICK':
-		robot.recoger
+		Robot.recoger()
 	if i=='MOVE':
-		robot.move
+		Robot.move()
 	if i=='ROTATE':
-		robot.rotate 
-	print (Mapa(dibujar))	
+		Robot.rotate() 
+	print (mi_mapa(dibujar))	
 	time.sleep(0.1)
 
 
