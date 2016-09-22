@@ -9,26 +9,31 @@ import time
 mi_mapa = cargar_mapa("mapas/mapa1.txt")
 reglas = cargar_instrucciones("instrucciones/programa1.txt")
 
+mapa=Mapa(25,80)
+
+
 for y  in range(len(mi_mapa)):
 	fila = mi_mapa[y]
 	for x in range (len(fila)):
 		casilla=mi_mapa[y][x]
 		if casilla == "*":
-			Robot.dibujar(x,y)
-			Mapa.asignar_robot(x,y)
-			Robot.asignar_mapa(x,y)
+			robot=Robot(x,y)
+			mapa.asignar_robot(robot)
+			robot.asignar_mapa(mapa)
 		else:
-			Moneda(x,y)
+			cantidad = int(casilla)
+			for i in range (cantidad):
+				moneda=Moneda(x,y)
+				mapa.agregar_moneda(moneda)
 
-	
 for i in reglas:
 	if i=='PICK':
-		Robot.recoger()
+		robot.recoger()
 	if i=='MOVE':
-		Robot.move()
+		robot.move()
 	if i=='ROTATE':
-		Robot.rotate() 
-	print (mi_mapa(dibujar))	
+		robot.rotate() 
+	print (mapa.dibujar())	
 	time.sleep(0.1)
 
 
