@@ -9,7 +9,7 @@ import time
 mi_mapa = cargar_mapa("mapas/mapa1.txt")
 reglas = cargar_instrucciones("instrucciones/programa1.txt")
 
-mapa=Mapa(25,80)
+mapa=Mapa(4,8)
 
 
 for y  in range(len(mi_mapa)):
@@ -25,16 +25,18 @@ for y  in range(len(mi_mapa)):
 			for i in range (cantidad):
 				moneda=Moneda(x,y)
 				mapa.agregar_moneda(moneda)
-
+mon=0
 for i in reglas:
 	if i=='PICK':
 		robot.recoger()
+		mon+=1
 	if i=='MOVE':
 		robot.move()
 	if i=='ROTATE':
 		robot.rotate() 
 	print (mapa.dibujar())	
-	time.sleep(0.1)
+	print ("Monedas: " , mon)
+	time.sleep(1)
 
 
 		

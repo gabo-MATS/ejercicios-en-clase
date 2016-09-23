@@ -3,13 +3,13 @@ class Robot(object):
 		self.direccion="^"
 		self.x=x
 		self.y=y
-		self.fichas=0
+		self.monedas=0
 		self.mapa= None
 
 	def move(self):
-		if self.direccion==">" and self.x<ancho:
+		if self.direccion==">" and self.x<8:
 			self.x+=1	
-		elif self.direccion=="v" and self.y<alto:
+		elif self.direccion=="v" and self.y<4:
 			self.y+=1
 		elif self.direccion=="<" and self.x>0:
 			self.x-=1
@@ -32,7 +32,7 @@ class Robot(object):
 	def recoger(self):
 		if self.mapa.contar_monedas_en(self.x, self.y) > 0:
 			self.monedas += 1
-			self.mapa.remover_moneda_en(x, y)
+			self.mapa.remover_moneda_en(self.x,self.y )
 
 	def dibujar(self):
 		return self.direccion
