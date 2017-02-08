@@ -1,35 +1,35 @@
-import request
+import requests
 
 
-class Tab (object)
-	def __init__(self,URL,nombre):
-		self.URL=URL
-		self.nombre=nombre
+class Tab (object):
+    def __init__(self,URL,nombre):
+        self.URL=URL
+        self.nombre=nombre
 
 
-	def descargar_URL(self,URL):
-		r = request.get(URL)
-		r.status_code
-		r.body
+    def descargar_URL(self,URL):
+        htm = requests.get(URL)
+        htm.code
+        grabartxt(htm)
 
-		
+        
     def creartxt():
-        archi=open('url.txt','w')
+        archi=open('html.txt','w')
         archi.close()
 
-    def grabartxt():
-        archi=open('url.txt','a')
-        archi.write(URL)
+    def grabartxt(r):
+        archi=open('html.txt','a')
+        archi.write(htm ,"\n")
         archi.close()
     def leertxt():
-        archi=open('url.txt','r')
+        archi=open('html.txt','r')
         linea=archi.readline()
         while linea!="":
-            print linea
+            return linea
             linea=archi.readline()
-        archi.close()           
-		
-	
+        archi.close()       
+        
+    
 
-		
+        
 

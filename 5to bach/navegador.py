@@ -1,4 +1,4 @@
-from tab import tab
+from tab import Tab
 
 
 
@@ -15,29 +15,28 @@ class Navegador(object):
 		ctab-=1
 		self.tabs.pop[ctab]		
 	def cerrar_tabs(self,tabs):
-		return self.tabs=[] 
+		self.tabs=[] 
 	def mostrar_tabs(self,tabs):
 		return self.tabs
 	def guardar_tab(self):
-		
+		grabartxt(url)
 	def cambiar_tabs(self,tabs):
+		self.tabs[n]=URL
 
 	def creartxt():
 		archi=open('url.txt','w')
 		archi.close()
 
-	def grabartxt():
+	def grabartxt(url):
 		archi=open('url.txt','a')
-		archi.write('Linea 1\n')
-		archi.write('Linea 2\n')
-		archi.write('Linea 3\n')
+		archi.write(url)
 		archi.close()
 	def leertxt():
 		archi=open('url.txt','r')
 		linea=archi.readline()
 		while linea!="":
-			print linea
+			return linea
 			linea=archi.readline()
-	 	archi.close()		
-	 	
+		archi.close()		
+		
 					
