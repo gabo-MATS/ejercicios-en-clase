@@ -14,13 +14,13 @@ class Navegador(object):
 	def cerrar_tab (self,ctab,tabs):
 		ctab-=1
 		self.tabs.pop[ctab]		
-	def cerrar_tabs(self,tabs):
+	def cerrar_tabs(self):
 		self.tabs=[] 
-	def mostrar_tabs(self,tabs):
+	def mostrar_tabs(self):
 		return self.tabs
 	def guardar_tab(self):
 		grabartxt(url)
-	def cambiar_tabs(self,tabs):
+	def cambiar_tabs(self,n):
 		self.tabs[n]=URL
 
 	def creartxt():

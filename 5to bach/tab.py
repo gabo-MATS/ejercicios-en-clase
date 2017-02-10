@@ -17,7 +17,7 @@ class Tab (object):
         archi=open('html.txt','w')
         archi.close()
 
-    def grabartxt(r):
+    def grabartxt(htm):
         archi=open('html.txt','a')
         archi.write(htm ,"\n")
         archi.close()

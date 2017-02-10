@@ -17,7 +17,7 @@ while opc!=10:
 		URL=input("ingrese el url nuevo ")
 		nombre = input ("ingrese el nombre del Tab ")
 
-		Navegador(agregar_tab(url,nombre))
+		navegador.agregar_tab(URL,nombre)
 		opc = int (input ("que opcion quiere ? "))
 
 	if opc == 3:
@@ -29,7 +29,7 @@ while opc!=10:
 		opc = int (input ("que opcion quiere ? "))
 
 	if opc == 5:
-
+		navegador.cerrar_tabs()
 		opc = int (input ("que opcion quiere ? "))
 
 	if opc == 6:
@@ -37,7 +37,7 @@ while opc!=10:
 		opc = int (input ("que opcion quiere ? "))
 
 	if opc == 7:
-		mostrar_tabs()
+		print (navegador.mostrar_tabs())
 
 		opc = int (input ("que opcion quiere ? "))
 
@@ -48,5 +48,4 @@ while opc!=10:
 	if opc == 9:
 		URL= input("que tab quiere guardar")
 
-
-		opc = int (input ("que opcion quiere ? "))
+		opc = int (input ("que opcion quiere ? "))		
