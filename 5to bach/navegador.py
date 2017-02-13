@@ -1,7 +1,4 @@
 from tab import Tab
-
-
-
 class Navegador(object):
 	def __init__ (self,nombre,version):
 		self.tabs=[]
@@ -11,16 +8,17 @@ class Navegador(object):
 	def agregar_tab(self, url,nombre):
 		tab =Tab(url,nombre)	
 		self.tabs.append(tab)
-	def cerrar_tab (self,ctab,tabs):
+	def cerrar_tab (self,ctab):
 		ctab-=1
 		self.tabs.pop[ctab]		
 	def cerrar_tabs(self):
 		self.tabs=[] 
 	def mostrar_tabs(self):
 		return self.tabs
-	def guardar_tab(self):
-		grabartxt(url)
-	def cambiar_tabs(self,n):
+	def guardar_tab(self,url):
+		Navegador.grabartxt(url)
+	def cambiar_tabs(self,n,URL):
+		n-=1
 		self.tabs[n]=URL
 
 	def creartxt():

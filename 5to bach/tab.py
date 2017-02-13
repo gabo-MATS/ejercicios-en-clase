@@ -7,10 +7,10 @@ class Tab (object):
         self.nombre=nombre
 
 
-    def descargar_URL(self,URL):
-        htm = requests.get(URL)
-        htm.code
-        grabartxt(htm)
+    def descargar_URL(self,HTML):
+        htm = requests.get(HTML)
+        htm.headers
+        Tab.grabartxt(htm)
 
         
     def creartxt():
