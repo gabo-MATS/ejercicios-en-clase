@@ -11,7 +11,7 @@ menu = int(input("""
 	6. Guardar lista de tabs
 	7. Guardar HTML de un tab
 	8. Salir 
-Eleccion: """))
+opcion que quiere: """))
 print("")
 
 while menu != 8:
@@ -51,5 +51,5 @@ while menu != 8:
 	6. Guardar lista de tabs
 	7. Guardar HTML de un tab
 	8. Salir 
-Eleccion: """))
+opcion que quiere: """))
 	print("")		
