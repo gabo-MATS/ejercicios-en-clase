@@ -1,58 +1,55 @@
 
 from navegador import Navegador
-from tab import Tab
-print (" 1 abrir\n 2 salir del navegador ")
 
-opc = int (input ("que opcion quiere ? "))
-if opc==2 :
-	opc=9
-	
-while opc!=9:
-	if opc == 1:
-		nombre = str(input("ingrese el nombre del navegador"))
-		version = str(input("ingrese la version del navegador"))
-		navegador=Navegador(nombre, version)
+tu_navegador = Navegador()
+menu = int(input("""
+	1. Crear nueva tab
+	2. Cambiar un tab
+	3. Cerrar un tab
+	4. Cerrar todos los tabs
+	5. Mostrar mis tabs
+	6. Guardar lista de tabs
+	7. Guardar HTML de un tab
+	8. Salir 
+Eleccion: """))
+print("")
 
-		print (" 1 abrir\n 2 agregar tab \n 3 cambiar tabs \n 4 cerrar tab\n 5 cerrar todos los tabs\n 6 guardar tab\n 7 mostrar tabs\n 8 descargar HTML de tab\n 9 salir del navegador ")
-		opc = int (input ("que opcion quiere ? "))
-	
-	if opc == 2:	
-		URL=input("ingrese el url nuevo ")
-		nombre = input ("ingrese el nombre del Tab ")
+while menu != 8:
+	if menu == 1:
+		nombre = input("Nombre del tab? ")
+		url = input("Url: ")
+		tu_navegador.crear_tab(url, nombre)
+	elif menu == 2:
+		tu_navegador.mostrar()
+		tab = input("Nombre del tab que desea modificar? ")
+		nombre_nuevo = input("Nombre nuevo del tab? ")
+		url_nueva = input("Url: ")
+		tu_navegador.modificar_tab(url_nueva, nombre_nuevo, tab)
+	elif menu == 3:
+		tu_navegador.mostrar()
+		tab = input("Nombre del tab que desea cerrar? ")
+		tu_navegador.cerrar(tab)
+	elif menu == 4:
+		pre = input("Esta seguro? ")
+		if pre == "si":
+			tu_navegador.vaciar()
+	elif menu == 5:
+		tu_navegador.mostrar()
+	elif menu == 6:
+		tu_navegador.guardar_tabs()
+	elif menu == 7:
+		tu_navegador.mostrar()
+		tab = input("Nombre del tab que desea guardar HTML? ")
+		tu_navegador.guardar_html(tab)
 
-		navegador.agregar_tab(URL,nombre)
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 3:
-		n= int (input("que tab quiere cambiar? "))
-		URL = input("ingrese el url nuevo ")
-		navegador.cambiar_tabs(n,URL)
-
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 4:
-		ctab=int (input("que tab quiere cerrar? "))
-		navegador.cerrar_tab(ctab)
-
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 5:
-		navegador.cerrar_tabs()
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 6:
-		url= input("que tab quiere guardar")
-		navegador.guadar_tab(url,url)
-
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 7:
-		print (navegador.mostrar_tabs())
-
-		opc = int (input ("que opcion quiere ? "))
-
-	if opc == 8:
-		HTML= input("que tab quiere descargar")
-		Tab.descargar_URL(HTML,HTML)
-
-		opc = int (input ("que opcion quiere ? "))		
+	menu = int(input("""
+	1. Crear nueva tab
+	2. Cambiar un tab
+	3. Cerrar un tab
+	4. Cerrar todos los tabs
+	5. Mostrar mis tabs
+	6. Guardar lista de tabs
+	7. Guardar HTML de un tab
+	8. Salir 
+Eleccion: """))
+	print("")		
