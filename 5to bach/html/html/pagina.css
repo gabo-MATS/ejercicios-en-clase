@@ -1,0 +1,49 @@
+
+.square1{
+	background: url(img1.jpg ) 100%;
+	text-align: center;
+	background-size: cover;
+	height: 300px;
+	
+}
+.tit{
+	font-size: 45px;
+	color: white;
+}
+.txt{
+	color: white;
+}
+.b1{
+	color: green;
+	background: white;
+	text-align: left;
+}
+.b2{
+	color: white;
+	background: lime;
+
+}
+
+.square2{
+	background: white;
+	color: green;
+	text-align: center;
+}
+.square{
+	height: 250px;
+	width:100%
+}
+.square3{
+	float: left;
+	width: 50%;
+	height: 100%;
+	
+}
+.square4{
+	background: lime;
+	text-align: center;
+	float: right;
+	width: 50%;
+	height: 100%;
+
+}

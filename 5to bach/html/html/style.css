@@ -1,0 +1,23 @@
+.red{
+	float: left;
+	background: red;
+	height: 600px;
+	width:50%;
+}
+.green{
+	float: right;
+	background: green;
+	height: 600px;
+	width:50%;
+}
+.blue{
+	background: blue;
+	height: 100px;
+	width :100%;
+ 	
+}
+.orange {
+	background: orange;
+	height: 700px;
+	width :100%;
+}
